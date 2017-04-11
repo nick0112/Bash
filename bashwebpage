@@ -2,16 +2,22 @@
 
 # Sample Script for making a html file
 
+title="Command Line is life"
+CURRENT_DATE=$(date +"%T")
+
 cat <<- _EOF_
-	<html>
+	
+    <html>
     <head>
         <title>
-        The title of your page
+        $title $HOSTNAME
         </title>
     </head>
 
     <body>
-        Your page content goes here.
+        <h1>$title $HOSTNAME
+        <p>Update on $CURRENT_DATE by $USER</p>
     </body>
     </html>
+
 _EOF_
